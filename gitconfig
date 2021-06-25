@@ -1,0 +1,60 @@
+[alias]
+  p = push -u origin head
+  st = status -s
+  ci = commit
+  ct = commit -m
+  co = checkout
+  di = diff -w
+  dc = diff --cached
+  cop = commit -m 'style: fix linter errors'
+  amend = commit --amend
+  b = branch
+  lga = log --graph --all --decorate --oneline
+  lg = log -p
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  churn = log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort -rn
+  shame = blame -w -M
+[color]
+  ui = true
+[core]
+  autocrlf = false
+  commitGraph = true
+  editor = vim
+  excludesfile = ~/.gitignore_global
+  symlinks = false
+[diff]
+  tool = vimdiff
+  compactionHeuristic = true
+  algorithm = patience
+[fetch]
+  prune = true
+[gc]
+  writeCommitGraph = true
+[github]
+  user = xlgmokha
+[help]
+  autocorrect = 1
+[init]
+  defaultBranch = main
+[log]
+  date = local
+[merge]
+  tool = vimdiff
+[protocol]
+  version = 2
+[protocol "https"]
+  allow = always
+[protocol "ssh"]
+  allow = always
+[pull]
+  ff = only
+  rebase = true
+[push]
+  default = simple
+[rerere]
+  enabled = true
+[user]
+  name = mo khan
+  email = mo@mokhan.ca
+  signingkey = 0xA26598E238F7A5D9

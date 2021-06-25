@@ -1,0 +1,12 @@
+commit-hooks=false
+fund=false
+ignore-scripts=true
+init-author-email=mo@mokhan.ca
+init-author-name=mo khan
+init-license=MIT
+init-version=0.1.0
+registry=https://registry.npmjs.org/
+script-shell=/bin/sh
+send-metrics=false
+strict-ssl=true
+update-notifier=false

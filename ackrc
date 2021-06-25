@@ -1,0 +1,16 @@
+--sort-files
+--color
+--type-add=ruby=rake,haml
+--type-add=vim=vimrc
+--type-add=js=json,ejs
+--type-set=cucumber=feature
+--type-set=css=scss
+--type-set=MARKDOWN=md,mkd,markdown
+--type-set=RDOC=rdoc
+--type-set=coffeescript=.coffee
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=coverage
+--ignore-dir=backups
+--ignore-dir=vendor

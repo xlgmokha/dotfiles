@@ -1,0 +1,18 @@
+
+export DEBEMAIL=mo@mokhan.ca
+export DEBFULLNAME="mo khan"
+export DOTNET_CLI_TELEMETRY_OPTOUT='1'
+export EDITOR="vim"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export HISTCONTROL=erasedups
+export HISTFILE=$HOME/.bash_history
+export HISTSIZE=100000
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+export INPUTRC="$HOME/.inputrc"
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LESSHISTFILE='/dev/null'
+export LSCOLORS='gxfxcxdxbxegedabagacad'
+export MANPAGER=/usr/bin/less
+export PAGER=/usr/bin/less
+export VISUAL="vim"

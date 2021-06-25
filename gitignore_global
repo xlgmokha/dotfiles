@@ -1,0 +1,8 @@
+*.DS_Store
+*.swo
+*.swp
+.netrwhist
+node_modules
+tags
+vendor/bundle
+vendor/ruby

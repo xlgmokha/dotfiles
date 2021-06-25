@@ -1,0 +1,17 @@
+--recurse=yes
+--totals=yes
+--extra=+f
+--fields=+iaS
+--tag-relative=yes
+--exclude=.bundle
+--exclude=.git
+--exclude=db
+--exclude=doc
+--exclude=docs
+--exclude=log
+--exclude=*.md
+--exclude=node_modules
+--exclude=public
+--exclude=tmp
+--exclude=vendor
+--exclude='*\.min\.*'

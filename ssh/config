@@ -1,0 +1,5 @@
+Host *
+  AddKeysToAgent ask
+  ForwardX11 no
+  ServerAliveInterval 60
+  UseRoaming no
