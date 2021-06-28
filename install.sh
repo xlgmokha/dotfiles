@@ -28,6 +28,15 @@ function dotfile()
   ln -sfn "$source" "$destination"
 }
 
+function install_pkgs()
+{
+  if [[ -n $CODESPACES ]]; then
+    apt-get update -y
+    # shellcheck disable=SC2046
+    apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
+  fi
+}
+
 mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.local/share"
 
 dotfile "ackrc"
@@ -44,3 +53,5 @@ dotfile "profile"
 dotfile "ssh/config"
 dotfile "vimrc"
 dotfile "wgetrc"
+
+install_pkgs
