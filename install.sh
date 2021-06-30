@@ -55,3 +55,4 @@ dotfile "vimrc"
 dotfile "wgetrc"
 
 install_pkgs
+git submodule update --init
