@@ -38,6 +38,7 @@ function install_pkgs()
 }
 
 mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.local/share"
+git submodule update --init
 
 dotdir "vim"
 dotfile "ackrc"
@@ -56,4 +57,3 @@ dotfile "vimrc"
 dotfile "wgetrc"
 
 install_pkgs
-git submodule update --init
