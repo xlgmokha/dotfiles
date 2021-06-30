@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+function debian_sid_sources()
+{
+  mv /etc/apt/sources.list /etc/apt/sources.list.bak
+  cp -f ./etc/apt/sources.list /etc/apt/sources.list
+}
+
+function install_pkgs()
+{
+  debian_sid_sources
+
+  apt-get update -y
+
+  # shellcheck disable=SC2046
+  apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
+}
+
+./script/setup
+install_pkgs
+
+./vim/pack/plugins/start/fzf/install --all
+cp -f ./vim/pack/plugins/start/fzf/bin/fzf "$HOME/.local/bin/"
