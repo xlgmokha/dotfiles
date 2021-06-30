@@ -35,6 +35,7 @@ function install_pkgs()
     # shellcheck disable=SC2046
     apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
     ./vim/pack/plugins/start/fzf/install --all
+    cp -f ./vim/pack/plugins/start/fzf/bin/fzf "$HOME/.local/bin/"
   fi
 }
 
