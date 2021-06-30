@@ -39,6 +39,7 @@ function install_pkgs()
 
 mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.local/share"
 
+dotdir "vim"
 dotfile "ackrc"
 dotfile "agignore"
 dotfile "bashrc"
