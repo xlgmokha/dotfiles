@@ -90,10 +90,13 @@ let localleader = "\\"
 inoremap jk <esc>
 nnoremap / /\v
 nnoremap ; :
+nnoremap <C-e> :Buffers<cr>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j<C-w>_
 nnoremap <C-k> <C-w>k<C-w>_
 nnoremap <C-l> <C-w>l
+nnoremap <C-n> :GFiles<cr>
+nnoremap <C-p> :Files<cr>
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
