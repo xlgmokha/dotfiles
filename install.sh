@@ -34,6 +34,7 @@ function install_pkgs()
     apt-get update -y
     # shellcheck disable=SC2046
     apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
+    ./vim/pack/plugins/start/fzf/install --all
   fi
 }
 
