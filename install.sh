@@ -31,6 +31,8 @@ function dotfile()
 function install_pkgs()
 {
   if [[ -n $CODESPACES ]]; then
+    mv /etc/apt/sources.list /etc/apt/sources.list.bak
+    cp -f ./etc/apt/sources.list /etc/apt/sources.list
     apt-get update -y
     # shellcheck disable=SC2046
     apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
