@@ -1,20 +1,21 @@
 [alias]
-  p = push -u origin head
-  st = status -s
-  ci = commit
-  ct = commit -m
-  co = checkout
-  di = diff -w
-  dc = diff --cached
-  cop = commit -m 'style: fix linter errors'
+  aa = add --all
   amend = commit --amend
   b = branch
+  churn = log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort -rn
+  ci = commit
+  co = checkout
+  cop = commit -m 'style: fix linter errors'
+  ct = commit -m
+  dc = diff --cached
+  di = diff -w
   lga = log --graph --all --decorate --oneline
   lg = log -p
-  lol = log --graph --decorate --oneline
   lola = log --graph --decorate --oneline --all
-  churn = log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort -rn
+  lol = log --graph --decorate --oneline
+  p = push -u origin head
   shame = blame -w -M
+  st = status -s
 [color]
   ui = true
 [core]
