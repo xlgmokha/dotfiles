@@ -7,3 +7,6 @@
 [submodule "vim/pack/plugins/start/nerdtree"]
   path = vim/pack/plugins/start/nerdtree
   url = https://github.com/scrooloose/nerdtree
+[submodule "vim/pack/plugins/start/paper"]
+  path = vim/pack/plugins/start/paper
+  url = https://github.com/YorickPeterse/vim-paper
