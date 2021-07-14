@@ -103,9 +103,11 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>fef :normal! gg=G``<CR>
 nnoremap <leader>h <C-w>s<C-w>l
 nnoremap <leader>hs :set hlsearch! hlsearch?<CR>
+nnoremap <leader>n :NERDTreeFind<cr>
 nnoremap <leader>p "+p
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <localleader>n :NERDTreeClose<cr>
 nnoremap <silent> <leader>cd :lcd %:h<CR>
 nnoremap <space> za
 nnoremap <tab> %
