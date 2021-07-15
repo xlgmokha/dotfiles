@@ -13,4 +13,4 @@ alias pbpaste='xclip -selection clipboard -o'
 alias ps="ps auxf"
 alias sshc="vim ~/.ssh/config"
 
-PS1="\[\e[0;36m\]\w\[\e[0m\] \nモ "
+PS1="\[\e[0;36m\]\w\[\e[0m\]\$(__git_ps1)\nモ "
