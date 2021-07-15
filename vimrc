@@ -107,6 +107,7 @@ nnoremap <leader>n :NERDTreeFind<cr>
 nnoremap <leader>p "+p
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <localleader>F :Ag<space>
 nnoremap <localleader>n :NERDTreeClose<cr>
 nnoremap <silent> <leader>cd :lcd %:h<CR>
 nnoremap <space> za
