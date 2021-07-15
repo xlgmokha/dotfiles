@@ -51,12 +51,12 @@ set ttyfast
 set visualbell
 
 set list
+set listchars=""
+set listchars=tab:\ \
 set listchars+=extends:>
 set listchars+=nbsp:_
 set listchars+=precedes:<
 set listchars+=trail:·
-set listchars=""
-set listchars=tab:\ \
 
 set wildmenu
 set wildmode=longest,list:longest
