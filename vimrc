@@ -101,6 +101,8 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>fef :normal! gg=G``<CR>
+nnoremap <leader>gb :Git blame -w -M<cr>
+nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>h <C-w>s<C-w>l
 nnoremap <leader>hs :set hlsearch! hlsearch?<CR>
 nnoremap <leader>n :NERDTreeFind<cr>

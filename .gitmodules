@@ -10,3 +10,6 @@
 [submodule "vim/pack/plugins/start/paper"]
   path = vim/pack/plugins/start/paper
   url = https://github.com/YorickPeterse/vim-paper
+[submodule "vim/pack/plugins/start/fugitive"]
+  path = vim/pack/plugins/start/fugitive
+  url = https://github.com/tpope/vim-fugitive.git
