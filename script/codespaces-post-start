@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.."
 
 function debian_sid_sources()
 {
-  mv /etc/apt/sources.list /etc/apt/sources.list.bak
+  mv /etc/apt/sources.list "/etc/apt/sources.list.$(date -I).bak"
   cp -f ./etc/apt/sources.list /etc/apt/sources.list
 }
 
