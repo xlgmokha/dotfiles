@@ -36,7 +36,6 @@ git submodule update --init
 dotdir "vim"
 dotfile "ackrc"
 dotfile "agignore"
-dotfile "bash_profile"
 dotfile "bashrc"
 dotfile "ctags"
 dotfile "curlrc"

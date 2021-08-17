@@ -1,4 +1,3 @@
-
 export DEBEMAIL=mo@mokhan.ca
 export DEBFULLNAME="mo khan"
 export DOTNET_CLI_TELEMETRY_OPTOUT='1'
@@ -15,3 +14,5 @@ export LSCOLORS='gxfxcxdxbxegedabagacad'
 export MANPAGER=/usr/bin/less
 export PAGER=/usr/bin/less
 export VISUAL="vim"
+
+[ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
