@@ -129,6 +129,9 @@ nnoremap <localleader>F :Ag<space>
 vnoremap <space> zf
 vnoremap <tab> %
 
+nmap <localleader>/ <Plug>CommentaryLine
+xmap <localleader>/ <Plug>Commentary
+
 nmap <leader><tab> <plug>(fzf-maps-n)
 omap <leader><tab> <plug>(fzf-maps-o)
 xmap <leader><tab> <plug>(fzf-maps-x)
