@@ -61,7 +61,7 @@ set visualbell
 
 set list
 set listchars=""
-set listchars=tab:\ \
+set listchars=tab:\ \ 
 set listchars+=extends:>
 set listchars+=nbsp:_
 set listchars+=precedes:<
