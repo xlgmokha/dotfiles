@@ -7,15 +7,17 @@ set autoindent
 set autoread
 set autowrite
 set backspace=indent,eol,start
-set backupdir=/tmp//
+set backupdir=~/tmp,/var/tmp,/tmp/
 set clipboard^=unnamed,unnamedplus
 set cmdheight=1
 set completeopt=menu,preview
 set cursorline
-set directory=/tmp//
+set diffopt=vertical
+set directory=~/tmp,/var/tmp,/tmp/
 set encoding=utf-8
 set expandtab
 set exrc
+set foldmethod=marker
 set gdefault
 set hidden
 set hlsearch
@@ -35,11 +37,14 @@ set re=1
 set ruler
 set scrolloff=3
 set secure
+set shell=bash
 set shiftround
 set shiftwidth=2
 set showcmd
 set showmatch
 set showmode
+set showtabline=2
+set signcolumn=number
 set smartcase
 set softtabstop=2
 set splitbelow
@@ -47,9 +52,11 @@ set splitright
 set t_Co=256
 set t_vb=
 set tabstop=2
-set tags=./.git/tags,./tmp/tags,./tags,tags,._tags
+set tags=tags
+set termencoding=utf-8
 set title
 set ttyfast
+set updatetime=200
 set visualbell
 
 set list
@@ -73,8 +80,11 @@ if executable('ag')
   set grepprg=ag\ --vimgrep\ $*
 endif
 
-"" File type-specific settings {{{{
-""
+if has("termguicolors")
+  let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+  let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+  set termguicolors
+endif
 
 runtime macros/matchit.vim
 filetype plugin indent on
