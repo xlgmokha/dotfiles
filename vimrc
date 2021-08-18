@@ -31,6 +31,7 @@ set nowrap
 set nowritebackup
 set number
 set numberwidth=5
+set re=1
 set ruler
 set scrolloff=3
 set secure
