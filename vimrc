@@ -9,7 +9,8 @@ set autowrite
 set backspace=indent,eol,start
 set backupdir=/tmp//
 set clipboard^=unnamed,unnamedplus
-set cmdheight=2
+set cmdheight=1
+set completeopt=menu,preview
 set cursorline
 set directory=/tmp//
 set encoding=utf-8
@@ -67,17 +68,16 @@ set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*.swp,*~,._*
 set wildignore+=*/tmp/*,*.so,*/coverage/*
 
-" }}}}
+if executable('ag')
+  set grepprg=ag\ --vimgrep\ $*
+endif
 
 "" File type-specific settings {{{{
 ""
 
-filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
-
-augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-augroup END
+runtime macros/matchit.vim
+filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 " }}}}
 
@@ -88,7 +88,6 @@ let mapleader = ","
 let localleader = "\\"
 
 inoremap jk <esc>
-nnoremap / /\v
 nnoremap ; :
 nnoremap <C-e> :Buffers<cr>
 nnoremap <C-h> <C-w>h
@@ -110,6 +109,7 @@ nnoremap <leader>p "+p
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <localleader>F :Ag<space>
+nnoremap <localleader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <localleader>n :NERDTreeClose<cr>
 nnoremap <silent> <leader>cd :lcd %:h<CR>
 nnoremap <space> za
@@ -120,7 +120,25 @@ noremap <Down> gj
 noremap <Up> gk
 noremap <leader>= <C-w>=
 vnoremap / /\v
+nnoremap <localleader>F :Ag<space>
 vnoremap <space> zf
 vnoremap <tab> %
+
+nmap <leader><tab> <plug>(fzf-maps-n)
+omap <leader><tab> <plug>(fzf-maps-o)
+xmap <leader><tab> <plug>(fzf-maps-x)
+
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+imap <c-x><c-n> <plug>(fzf-complete-buffer-line)
+
+" }}}}
+
+"" Plugin Configuration {{{{
+""
+
+let g:fzf_tags_command = 'ctags -R'
 
 " }}}}
