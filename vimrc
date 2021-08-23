@@ -44,7 +44,6 @@ set showcmd
 set showmatch
 set showmode
 set showtabline=2
-set signcolumn=number
 set smartcase
 set softtabstop=2
 set splitbelow
@@ -78,6 +77,10 @@ set wildignore+=*/tmp/*,*.so,*/coverage/*
 
 if executable('ag')
   set grepprg=ag\ --vimgrep\ $*
+endif
+
+if has('signcolumn')
+  set signcolumn=number
 endif
 
 runtime macros/matchit.vim
