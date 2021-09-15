@@ -14,3 +14,5 @@ alias ps="ps auxf"
 alias sshc="vim ~/.ssh/config"
 
 PS1="\[\e[0;36m\]\w\[\e[0m\]\$(__git_ps1)\n$ "
+
+[ -f /etc/bash_completion.d/git-prompt ] && source /etc/bash_completion.d/git-prompt
