@@ -22,9 +22,6 @@ function install_pkgs()
 
 ./script/setup
 
-./vim/pack/plugins/start/fzf/install --all
-cp -f ./vim/pack/plugins/start/fzf/bin/fzf "$HOME/.local/bin/"
-
 if [[ -f "/usr/bin/fdfind" ]]; then
   ln -s /usr/bin/fdfind /usr/bin/fd
 fi
