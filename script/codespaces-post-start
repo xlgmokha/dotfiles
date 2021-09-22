@@ -12,7 +12,7 @@ function debian_sid_sources()
 
 function install_pkgs()
 {
-  debian_sid_sources
+  # debian_sid_sources
 
   apt-get update -y
 
