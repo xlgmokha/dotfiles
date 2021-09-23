@@ -50,6 +50,3 @@ dotfile "ssh/config"
 dotfile "tmux.conf"
 dotfile "vimrc"
 dotfile "wgetrc"
-
-./vim/pack/plugins/start/fzf/install --all
-cp -f ./vim/pack/plugins/start/fzf/bin/fzf "$HOME/.local/bin/"

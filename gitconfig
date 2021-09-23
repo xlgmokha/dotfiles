@@ -2,18 +2,15 @@
   aa = add --all
   amend = commit --amend
   b = branch
-  churn = log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort -rn
   ci = commit
   co = checkout
   cop = commit -m 'style: fix linter errors'
-  ct = commit -m
   dc = diff --cached
   di = diff -w
   lga = log --graph --all --decorate --oneline
   lg = log -p
   lola = log --graph --decorate --oneline --all
   lol = log --graph --decorate --oneline
-  p = push -u origin head
   shame = blame -w -M
   st = status -s
 [color]
