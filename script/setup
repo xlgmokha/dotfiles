@@ -32,7 +32,7 @@ function dotfile()
 
 function try()
 {
-  $@ 2>/dev/null || sudo $@
+  "$@" 2>/dev/null || sudo "$@"
 }
 
 mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.local/share"
