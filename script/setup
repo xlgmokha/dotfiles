@@ -30,6 +30,11 @@ function dotfile()
   ln -sfn "$source" "$destination"
 }
 
+function try()
+{
+  $@ 2>/dev/null || sudo $@
+}
+
 mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.local/share"
 git submodule update --init
 
@@ -50,3 +55,10 @@ dotfile "ssh/config"
 dotfile "tmux.conf"
 dotfile "vimrc"
 dotfile "wgetrc"
+
+if [ -n "$CODESPACES" ]; then
+  try apt-get update -y
+
+  # shellcheck disable=SC2046
+  try apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
+fi
