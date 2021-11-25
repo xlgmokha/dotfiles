@@ -56,9 +56,8 @@ dotfile "tmux.conf"
 dotfile "vimrc"
 dotfile "wgetrc"
 
-if [ -n "$CODESPACES" ]; then
-  try apt-get update -y
+try apt-get update -y
+# shellcheck disable=SC2046
+try apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
 
-  # shellcheck disable=SC2046
-  try apt-get install -y --no-install-recommends $(tr '\n' ' ' < ./apt.list)
-fi
+command -v fd || try ln -s /usr/bin/fdfind /usr/bin/fd
