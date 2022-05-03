@@ -16,3 +16,6 @@
 [submodule "vim/pack/plugins/start/commentary"]
   path = vim/pack/plugins/start/commentary
   url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/pack/plugins/start/go"]
+  path = vim/pack/plugins/start/go
+  url = https://github.com/fatih/vim-go.git

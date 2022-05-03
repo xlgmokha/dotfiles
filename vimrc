@@ -151,5 +151,7 @@ imap <c-x><c-n> <plug>(fzf-complete-buffer-line)
 ""
 
 let g:fzf_tags_command = 'ctags -R'
+let g:go_fmt_autosave = 1
+let g:go_list_type = "quickfix"
 
 " }}}}
